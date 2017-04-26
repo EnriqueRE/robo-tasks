@@ -5,8 +5,11 @@ import {registerEvents} from './project.events';
 
 var ProjectSchema = new mongoose.Schema({
   name: String,
-  info: String,
-  active: Boolean
+  description: String,
+  active: Boolean,
+  startDate: Date,
+  endDate: Date,
+  technologies: [String]
 });
 
 registerEvents(ProjectSchema);
